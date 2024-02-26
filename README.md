@@ -12,13 +12,18 @@ version 0.0.0
 
 Function consisting component function body accepts context and extra custom parameters.
 
-Context initializer accepts data and array of dependencies, and returns `void *` context.
+Context initializer accepts below and returns true on error, false on success
+
+- `void *` data
+- `di_t *` array of dependencies
+- `void **` (out) space to store result
 
 Context finalizer accepts context and returns nothing.
 
 dependencies are in format below:
 
 ```c
+#pragma pack(1)
 typedef struct di {
     void *context;
     void *function; // cast to appropriate function pointer type
