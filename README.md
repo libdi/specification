@@ -23,11 +23,12 @@ Context finalizer accepts context and returns nothing.
 dependencies are in format below:
 
 ```c
-#pragma pack(1)
+#pragma pack(push, 1)
 typedef struct di {
     void *context;
     void *function; // cast to appropriate function pointer type
 } di_t;
+#pragma pack(pop)
 ```
 
 ## File structure
