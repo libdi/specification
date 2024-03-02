@@ -43,7 +43,7 @@ All `u16`, `u32`, ... is stored in little-endian order.
 - 12..16: `u32` size of data
 - 16..18: `u16` number of dependencies for initializer function
 - ...: dependencies
-  - 0..1: `u8` length of module ID, or 255 for component in same module
+  - 0..1: `u8` length of module ID, or 0 for component in same module
   - ...: multiple `u8` for module ID, or `u16` index of component
 - ...: function body, initializer/finalizer function, data
 
